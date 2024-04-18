@@ -31,3 +31,37 @@ D:\Projects\isu-test\backend\backend\obj\Debug\net7.0\refint\backend.dll
 D:\Projects\isu-test\backend\backend\obj\Debug\net7.0\backend.pdb
 D:\Projects\isu-test\backend\backend\obj\Debug\net7.0\backend.genruntimeconfig.cache
 D:\Projects\isu-test\backend\backend\obj\Debug\net7.0\ref\backend.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\appsettings.Development.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\appsettings.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\backend.exe
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\backend.deps.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\backend.runtimeconfig.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\backend.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\backend.pdb
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\Microsoft.OpenApi.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.csproj.AssemblyReference.cache
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.GeneratedMSBuildEditorConfig.editorconfig
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.AssemblyInfoInputs.cache
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.AssemblyInfo.cs
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.csproj.CoreCompileInputs.cache
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.MvcApplicationPartsAssemblyInfo.cs
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.MvcApplicationPartsAssemblyInfo.cache
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.sourcelink.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\staticwebassets.build.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\staticwebassets.development.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\staticwebassets\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\staticwebassets\msbuild.build.backend.props
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.backend.props
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.backend.props
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\staticwebassets.pack.json
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\scopedcss\bundle\backend.styles.css
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.csproj.CopyComplete
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\refint\backend.dll
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.pdb
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\backend.genruntimeconfig.cache
+E:\My Projects\ISU Corp\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\backend\backend\obj\Debug\net7.0\ref\backend.dll

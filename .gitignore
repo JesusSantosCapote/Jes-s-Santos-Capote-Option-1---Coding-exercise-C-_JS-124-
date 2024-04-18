@@ -1,0 +1,58 @@
+# ASP.NET Core specific
+**/bin/
+**/obj/
+**/out/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio specific
+.vs/
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Node modules for React
+node_modules/
+
+# Environment files
+*.env
+
+# Build results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.DotSettings.user
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# TFS 2012 Local Workspace
+$tf/
+
+# End of list

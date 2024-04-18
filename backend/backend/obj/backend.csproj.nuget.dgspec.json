@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\My Projects\\ISU Corp\\backend\\backend\\backend.csproj": {}
+    "E:\\My Projects\\ISU Corp\\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\\backend\\backend\\backend.csproj": {}
   },
   "projects": {
-    "E:\\My Projects\\ISU Corp\\backend\\backend\\backend.csproj": {
+    "E:\\My Projects\\ISU Corp\\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\\backend\\backend\\backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\My Projects\\ISU Corp\\backend\\backend\\backend.csproj",
+        "projectUniqueName": "E:\\My Projects\\ISU Corp\\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\\backend\\backend\\backend.csproj",
         "projectName": "backend",
-        "projectPath": "E:\\My Projects\\ISU Corp\\backend\\backend\\backend.csproj",
+        "projectPath": "E:\\My Projects\\ISU Corp\\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\\backend\\backend\\backend.csproj",
         "packagesPath": "C:\\Users\\Chuchi\\.nuget\\packages\\",
-        "outputPath": "E:\\My Projects\\ISU Corp\\backend\\backend\\obj\\",
+        "outputPath": "E:\\My Projects\\ISU Corp\\Jesús Santos Capote-Option 1 - Coding exercise C#_JS[124]\\backend\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
