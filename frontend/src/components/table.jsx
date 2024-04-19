@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import * as React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -28,17 +27,20 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell>User Id</TableCell>
-            <TableCell align="right">User Name</TableCell>
+            <TableCell>User Name</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {data.map((user) => (
             <TableRow
-              key={row.Id}
+              key={user.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
+              <TableCell>
+                {user.id}
+              </TableCell>
               <TableCell component="th" scope="row">
-                {row.Name}
+                {user.name}
               </TableCell>
             </TableRow>
           ))}
