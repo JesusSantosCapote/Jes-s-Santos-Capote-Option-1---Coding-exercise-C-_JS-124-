@@ -1,5 +1,6 @@
 using backend.DataAccess.DataContext;
 using backend.DataAccess.Repositories;
+using backend.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,7 @@ var builder = WebApplication.CreateBuilder(args);
     });
 
     builder.Services.AddScoped<IUserRepository, UserRepositoy>();
+    builder.Services.AddScoped<IUserService, UserService>();
 }
 
 
