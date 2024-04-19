@@ -1,4 +1,5 @@
 using backend.DataAccess.DataContext;
+using backend.DataAccess.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,8 @@ var builder = WebApplication.CreateBuilder(args);
     {
         options.UseInMemoryDatabase(databaseName: "UsersDb");
     });
+
+    builder.Services.AddScoped<IUserRepository, UserRepositoy>();
 }
 
 
