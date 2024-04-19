@@ -2,6 +2,7 @@ using backend.Services;
 using Microsoft.AspNetCore.Mvc;
 using backend.Result;
 using backend.Extensions;
+using backend.DataAccess.Entities;
 
 namespace backend.Controllers;
 
@@ -33,6 +34,13 @@ public class UserController : ControllerBase
     public async Task<IActionResult> DeleteUser(int id)
     {
         var result = await _userService.DeleteUserAsync(id);
+        return this.FromResult(result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateUser(User user)
+    {
+        var result = await _userService.UpdateUserAsync(user);
         return this.FromResult(result);
     }
 }
