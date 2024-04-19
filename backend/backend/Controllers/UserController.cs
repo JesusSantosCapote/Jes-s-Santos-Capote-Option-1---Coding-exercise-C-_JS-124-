@@ -1,6 +1,7 @@
-using backend.DataAccess.Entities;
 using backend.Services;
 using Microsoft.AspNetCore.Mvc;
+using backend.Result;
+using backend.Extensions;
 
 namespace backend.Controllers;
 
@@ -17,18 +18,14 @@ public class UserController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetUsers()
     {
-        return Ok(await _userService.GetUsersAsync());
+        var result = await _userService.GetUsersAsync();
+        return this.FromResult(result);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetUser(int id)
     {
-        var requestedUser = await _userService.GetUserByIdAsync(id);
-
-        if (requestedUser == null){
-            return NotFound($"User with id {id} not found");
-        }
-
-        return Ok(requestedUser);
+        var result = await _userService.GetUserByIdAsync(id);
+        return this.FromResult(result);
     }
 }

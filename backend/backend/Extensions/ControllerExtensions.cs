@@ -16,7 +16,7 @@ namespace backend.Extensions
                 case ResultType.NotFound:
                     return controller.NotFound(result.Errors);
                 case ResultType.Unexpected:
-                    return controller.BadRequest(result.Errors);
+                    return controller.StatusCode(StatusCodes.Status500InternalServerError, result.Errors);
                 default:
                     throw new Exception("An unhandled result has occurred as a result of a service call.");
             }
