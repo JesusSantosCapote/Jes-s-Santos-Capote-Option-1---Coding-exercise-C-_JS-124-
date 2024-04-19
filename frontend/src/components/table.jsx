@@ -6,21 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import axios from '../axios'
 
-export default function UserTable() {
-    const [data, setData] = useState([]);
-
-    useEffect(() => 
-    {
-        axios
-        .get("/users", {})
-        .then(response => {setData(response.data)})
-        .catch((error) => {
-            console.log(error)
-        })
-    })
-
+export default function UserTable({data}) {
     return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">

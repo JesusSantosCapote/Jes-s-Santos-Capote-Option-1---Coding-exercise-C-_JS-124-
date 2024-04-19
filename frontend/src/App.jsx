@@ -1,6 +1,6 @@
 import './App.css';
-import UserTable from './components/Table';
 import TextInputWithButton from './components/TextInputWithButton';
+import AllUsers from './components/AllUsers';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div>
       <h1>Users Dashboard</h1>
       <TextInputWithButton button_text={"Search"} input_label={"Id"} hanldeClick={()=>{}}/>
-      <UserTable/>
+      <AllUsers/>
     </div>
   )
 }
