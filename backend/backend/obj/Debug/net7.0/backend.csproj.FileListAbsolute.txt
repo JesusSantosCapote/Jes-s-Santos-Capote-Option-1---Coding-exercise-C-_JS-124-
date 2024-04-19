@@ -99,3 +99,6 @@ E:\My Projects\ISU Corp\UserApp\backend\backend\obj\Debug\net7.0\refint\backend.
 E:\My Projects\ISU Corp\UserApp\backend\backend\obj\Debug\net7.0\backend.pdb
 E:\My Projects\ISU Corp\UserApp\backend\backend\obj\Debug\net7.0\backend.genruntimeconfig.cache
 E:\My Projects\ISU Corp\UserApp\backend\backend\obj\Debug\net7.0\ref\backend.dll
+E:\My Projects\ISU Corp\UserApp\backend\backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\My Projects\ISU Corp\UserApp\backend\backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\My Projects\ISU Corp\UserApp\backend\backend\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll

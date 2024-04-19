@@ -2,6 +2,7 @@ using backend.DataAccess.DataContext;
 using backend.DataAccess.Repositories;
 using backend.Services;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 { 
@@ -31,6 +32,14 @@ var app = builder.Build();
     {
         app.UseSwagger();
         app.UseSwaggerUI();
+    }
+
+    //Data Seeding for InMemory database
+    using (var scope = app.Services.CreateScope())
+    {
+        var scopedProvider = scope.ServiceProvider;
+        var context = scopedProvider.GetRequiredService<UserApiInMemoryContext>();
+        context.Database.EnsureCreated();
     }
 
     app.UseHttpsRedirection();

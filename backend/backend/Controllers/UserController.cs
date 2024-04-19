@@ -1,4 +1,5 @@
 using backend.DataAccess.Entities;
+using backend.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend.Controllers;
@@ -7,22 +8,22 @@ namespace backend.Controllers;
 [Route("api/users")]
 public class UserController : ControllerBase
 {
-    private static readonly List<User> _users = new()
+    IUserService _userService;
+    public UserController(IUserService userService)
     {
-        new User { Id = 1, Name = "Jhon Doe" },
-        new User { Id = 2, Name = "Jane Doe" }
-    };
+        _userService = userService;
+    }
 
     [HttpGet]
-    public IActionResult GetUsers()
+    public async Task<IActionResult> GetUsers()
     {
-        return Ok(_users);
+        return Ok(await _userService.GetUsersAsync());
     }
 
     [HttpGet("{id}")]
-    public IActionResult GetUser(int id)
+    public async Task<IActionResult> GetUser(int id)
     {
-        User requestedUser = _users.Find(x => x.Id == id);
+        var requestedUser = await _userService.GetUserByIdAsync(id);
 
         if (requestedUser == null){
             return NotFound($"User with id {id} not found");

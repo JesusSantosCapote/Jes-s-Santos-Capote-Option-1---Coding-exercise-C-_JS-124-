@@ -24,7 +24,7 @@ namespace backend.Services
             return deletedUser;
         }
 
-        public async Task<User> GetUserById(int id)
+        public async Task<User> GetUserByIdAsync(int id)
         {
             User user = await _userRepository.GetAsync(id);
 
