@@ -28,4 +28,11 @@ public class UserController : ControllerBase
         var result = await _userService.GetUserByIdAsync(id);
         return this.FromResult(result);
     }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteUser(int id)
+    {
+        var result = await _userService.DeleteUserAsync(id);
+        return this.FromResult(result);
+    }
 }
