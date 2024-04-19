@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import UserTable from "./Table";
+import UserTable from "./UserTable";
 import Button from '@mui/material/Button';
 import axios from '../axios'
 
