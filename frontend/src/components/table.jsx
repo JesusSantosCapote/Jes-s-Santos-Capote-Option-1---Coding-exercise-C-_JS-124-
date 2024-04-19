@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from '../axios'
 
-export default function BasicTable() {
+export default function UserTable() {
     const [data, setData] = useState([]);
 
     useEffect(() => 
