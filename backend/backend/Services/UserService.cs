@@ -1,5 +1,6 @@
 ﻿using backend.DataAccess.Entities;
 using backend.DataAccess.Repositories;
+using backend.Result;
 
 namespace backend.Services
 {
@@ -7,42 +8,95 @@ namespace backend.Services
     {
         private readonly IUserRepository _userRepository;
 
-        public UserService(IUserRepository userRepository) {
+        public UserService(IUserRepository userRepository)
+        {
             _userRepository = userRepository;
         }
 
-        public async Task<User> AddUserAsync(User user)
+        public async Task<Result<User>> AddUserAsync(User user)
         {
-            User newUser = await _userRepository.AddAsync(user);
-
-            return newUser;
+            try
+            {
+                User newUser = await _userRepository.AddAsync(user);
+                return new SuccessResult<User>(newUser);
+            }
+            catch (Exception ex)
+            {
+                return new UnexpectedResult<User>(ex.Message);
+            }
         }
 
-        public async Task<User> DeleteUserAsync(int id)
+        public async Task<Result<User>> DeleteUserAsync(int id)
         {
-            User deletedUser = await _userRepository.DeleteAsync(id);
-            return deletedUser;
+            try
+            {
+                var user = await _userRepository.GetAsync(id);
+
+                if (user == null)
+                {
+                    return new NotFoundResult<User>($"User with id:{id} not found");
+                }
+
+                await _userRepository.DeleteAsync(id);
+                return new NoContentResult<User>();
+            }
+            catch (Exception ex)
+            {
+                return new UnexpectedResult<User>(ex.Message);
+            }
         }
 
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<Result<User>> GetUserByIdAsync(int id)
         {
-            User user = await _userRepository.GetAsync(id);
+            try
+            {
+                User user = await _userRepository.GetAsync(id);
 
-            return user;
+                if (user == null)
+                {
+                    return new NotFoundResult<User>($"User with id:{id} not found");
+                }
+
+                return new SuccessResult<User>(user);
+            }
+            catch (Exception ex)
+            {
+                return new UnexpectedResult<User>(ex.Message);
+            }
         }
 
-        public async Task<IEnumerable<User>> GetUsersAsync()
+        public async Task<Result<IEnumerable<User>>> GetUsersAsync()
         {
-            var users = await _userRepository.GetAllAsync();
+            try
+            {
+                var users = await _userRepository.GetAllAsync();
 
-            return users;
+                return new SuccessResult<IEnumerable<User>>(users);
+            }
+            catch (Exception ex)
+            {
+                return new UnexpectedResult<IEnumerable<User>>(ex.Message);
+            }
         }
 
-        public async Task<User> UpdateUserAsync(User user)
+        public async Task<Result<User>> UpdateUserAsync(User user)
         {
-            var updatedUser = await _userRepository.UpdateAsync(user);
+            try
+            {
+                User userToUpdate = await _userRepository.GetAsync(user.Id);
 
-            return updatedUser;
+                if(userToUpdate == null)
+                {
+                    return new NotFoundResult<User>($"User with id:{user.Id} not found");
+                }
+
+                await _userRepository.UpdateAsync(user);
+                return new NoContentResult<User>();
+            }
+            catch (Exception ex)
+            {
+                return new UnexpectedResult<User>(ex.Message);
+            }
         }
     }
 }

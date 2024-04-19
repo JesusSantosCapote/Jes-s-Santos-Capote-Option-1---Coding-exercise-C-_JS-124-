@@ -1,14 +1,14 @@
 ﻿using backend.DataAccess.Entities;
-using Microsoft.AspNetCore.Identity;
+using backend.Result;
 
 namespace backend.Services
 {
     public interface IUserService
     {
-        public Task<IEnumerable<User>> GetUsersAsync();
-        public Task<User> GetUserByIdAsync(int id);
-        public Task<User> AddUserAsync(User user);
-        public Task<User> UpdateUserAsync(User user);
-        public Task<User> DeleteUserAsync(int id);
+        public Task<Result<IEnumerable<User>>> GetUsersAsync();
+        public Task<Result<User>> GetUserByIdAsync(int id);
+        public Task<Result<User>> AddUserAsync(User user);
+        public Task<Result<User>> UpdateUserAsync(User user);
+        public Task<Result<User>> DeleteUserAsync(int id);
     }
 }
