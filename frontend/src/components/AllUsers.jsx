@@ -23,6 +23,8 @@ export default function AllUsers(){
             <Button size='large' variant="contained" onClick={() => handleClick()}>
                 Show all users
             </Button>
+            <br/>
+            <br/>
             {isShowing && <UserTable data={data}/>}
         </div>
     )

@@ -9,6 +9,7 @@ function App() {
     <div>
       <h1>Users Dashboard</h1>
       <UserById/>
+      <br/>
       <AllUsers/>
     </div>
   )
