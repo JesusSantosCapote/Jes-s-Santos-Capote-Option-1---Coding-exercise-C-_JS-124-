@@ -1,3 +1,6 @@
+using backend.DataAccess.DataContext;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 { 
     builder.Services.AddControllers();
@@ -9,6 +12,11 @@ var builder = WebApplication.CreateBuilder(args);
                .AllowAnyMethod()
                .AllowAnyHeader();
     }));
+
+    builder.Services.AddDbContext<UserApiInMemoryContext>(options =>
+    {
+        options.UseInMemoryDatabase(databaseName: "UsersDb");
+    });
 }
 
 
