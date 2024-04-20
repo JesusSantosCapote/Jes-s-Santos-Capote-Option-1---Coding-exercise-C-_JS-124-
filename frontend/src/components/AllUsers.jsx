@@ -9,7 +9,7 @@ export default function AllUsers(){
     const [isShowing, setShow] = useState(false)
 
     const handleClick = async () =>{
-        axios
+        await axios
         .get("/users", {})
         .then(response => {setData(response.data)})
         .catch((error) => {

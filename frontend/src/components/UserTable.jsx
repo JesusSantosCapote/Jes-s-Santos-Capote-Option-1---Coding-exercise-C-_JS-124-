@@ -14,8 +14,8 @@ import Grid from '@mui/material/Grid';
 export default function UserTable({data, handleDelete, handleUpdate}) {
   const [modalOpen, setModal] = useState(false)
 
-  const handleDeleteButtonClick = (id) => {
-    axios.delete(`/users/${id}`)
+  const handleDeleteButtonClick = async (id) => {
+    await axios.delete(`/users/${id}`)
     .catch((error) => console.log(error))
     .then(() => handleDelete(id))
   }

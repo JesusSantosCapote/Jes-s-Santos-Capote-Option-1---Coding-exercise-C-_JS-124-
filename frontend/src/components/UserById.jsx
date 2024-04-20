@@ -11,13 +11,14 @@ export default function UserById() {
   const [data, setData] = useState([])
 
   const handleClick = async (id) => {
-    axios
+    await axios
     .get(`/users/${id}`)
-    .then(response => {setData([response.data])});
+    .then(response => {setData([response.data])})
+    .catch(error => alert(error))
     setShow(true)
   }
 
-  const handleDelete = async (id) => {
+  const handleDelete = (id) => {
     const newData = data.filter((user) => user.id != id);
     setData(newData)
   }

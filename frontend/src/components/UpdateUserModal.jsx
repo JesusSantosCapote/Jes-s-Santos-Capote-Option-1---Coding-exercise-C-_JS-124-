@@ -24,9 +24,9 @@ export default function UpdateUserModal({id, handleUpdate}) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     const user = {id: id, name: nameInput}
-    axios.put(`/users/${id}`, user)
+    await axios.put(`/users/${id}`, user)
     .catch(error => console.log(error))
     .then(handleUpdate(user))
   };

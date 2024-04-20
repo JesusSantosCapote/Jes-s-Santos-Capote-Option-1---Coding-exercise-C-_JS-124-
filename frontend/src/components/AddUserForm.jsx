@@ -13,7 +13,7 @@ export default function AddUserForm() {
 
   const handleClick = async () => {
     const newUser = {id: inputId, name: inputName}
-    axios
+    await axios
     .post("/users", newUser)
     .then(() => {setSuccess(true)})
     .catch(error => console.log(error))
