@@ -8,8 +8,12 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from '../axios'
 import Button from '@mui/material/Button';
+import KeepMountedModal from './UpdateUserModal';
+import Grid from '@mui/material/Grid';
 
-export default function UserTable({data, handleDelete}) {
+export default function UserTable({data, handleDelete, handleUpdate}) {
+  const [modalOpen, setModal] = useState(false)
+
   const handleDeleteButtonClick = (id) => {
     axios.delete(`/users/${id}`)
     .catch((error) => console.log(error))
@@ -18,7 +22,7 @@ export default function UserTable({data, handleDelete}) {
 
   return (
   <TableContainer component={Paper}>
-    <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <Table sx={{ minWidth: 450 }} aria-label="simple table">
       <TableHead>
         <TableRow>
           <TableCell>User Id</TableCell>
@@ -39,9 +43,17 @@ export default function UserTable({data, handleDelete}) {
               {user.name}
             </TableCell>
             <TableCell>
-              <Button size='small' variant="contained" onClick={() => {handleDeleteButtonClick(user.id)}}>
-                  Delete
-              </Button>
+            <Grid container spacing={10}>
+              <Grid item xs={2}>
+                <Button size='small' variant="contained" onClick={() => {handleDeleteButtonClick(user.id)}}>
+                    Delete
+                </Button>
+              </Grid>
+              <Grid item xs={2}>
+                <KeepMountedModal id={user.id} handleUpdate={handleUpdate}/>
+              </Grid>
+            </Grid>
+              
             </TableCell>
           </TableRow>
         ))}

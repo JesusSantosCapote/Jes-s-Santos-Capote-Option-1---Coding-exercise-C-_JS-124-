@@ -23,6 +23,16 @@ export default function AllUsers(){
         setData(newData)
     }
 
+    const handleUpdate = (user) => {
+        const newData = data.map((item) => {
+            if (item.id == user.id){
+                return {...item, name: user.name};
+            }
+            return item;
+        })
+        setData(newData)
+    }
+
     return(
         <div>
             <Button size='large' variant="contained" onClick={() => handleClick()}>
@@ -30,7 +40,7 @@ export default function AllUsers(){
             </Button>
             <br/>
             <br/>
-            {isShowing && <UserTable data={data} handleDelete={handleDelete}/>}
+            {isShowing && <UserTable data={data} handleDelete={handleDelete} handleUpdate={handleUpdate}/>}
         </div>
     )
 }
