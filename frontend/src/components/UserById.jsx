@@ -23,6 +23,16 @@ export default function UserById() {
     setData(newData)
   }
 
+  const handleUpdate = (user) => {
+    const newData = data.map((item) => {
+        if (item.id == user.id){
+            return {...item, name: user.name};
+        }
+        return item;
+    })
+    setData(newData)
+  }
+
   return (
     <div>
       <h3>Search User by they Id</h3>
@@ -40,7 +50,7 @@ export default function UserById() {
         <Button size='large' variant="contained" onClick={() => handleClick(input)}>Search</Button>
       </Box>
       <br/>
-      {isShowing && <UserTable data={data} handleDelete={handleDelete}/>}
+      {isShowing && <UserTable data={data} handleDelete={handleDelete} handleUpdate={handleUpdate}/>}
     </div>
   );
 }
