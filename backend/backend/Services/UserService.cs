@@ -1,6 +1,7 @@
 ﻿using backend.DataAccess.Entities;
 using backend.DataAccess.Repositories;
 using backend.Result;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace backend.Services
 {
@@ -18,7 +19,8 @@ namespace backend.Services
             try
             {
                 User newUser = await _userRepository.AddAsync(user);
-                return new SuccessResult<User>(newUser);
+
+                return new CreatedAtResult<User>(newUser);
             }
             catch (Exception ex)
             {

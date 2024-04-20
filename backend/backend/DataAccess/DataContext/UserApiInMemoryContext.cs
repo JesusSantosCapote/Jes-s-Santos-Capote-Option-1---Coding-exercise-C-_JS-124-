@@ -13,6 +13,7 @@ namespace backend.DataAccess.DataContext
                 new User { Id = 1, Name = "Jhon Doe" },
                 new User { Id = 2, Name = "Jane Doe" }
             );
+
         }
 
         public DbSet<User> Users { get; set; }
