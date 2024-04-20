@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import axios from '../axios'
 import Button from '@mui/material/Button';
-import KeepMountedModal from './UpdateUserModal';
+import UpdateUserModal from './UpdateUserModal';
 import Grid from '@mui/material/Grid';
 
 export default function UserTable({data, handleDelete, handleUpdate}) {
@@ -50,7 +50,7 @@ export default function UserTable({data, handleDelete, handleUpdate}) {
                 </Button>
               </Grid>
               <Grid item xs={2}>
-                <KeepMountedModal id={user.id} handleUpdate={handleUpdate}/>
+                <UpdateUserModal id={user.id} handleUpdate={handleUpdate}/>
               </Grid>
             </Grid>
               

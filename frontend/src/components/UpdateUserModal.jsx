@@ -18,7 +18,7 @@ const style = {
   p: 4,
 };
 
-export default function KeepMountedModal({id, handleUpdate}) {
+export default function UpdateUserModal({id, handleUpdate}) {
   const [open, setOpen] = React.useState(false);
   const [nameInput, setName] = React.useState("")
   const handleOpen = () => setOpen(true);
