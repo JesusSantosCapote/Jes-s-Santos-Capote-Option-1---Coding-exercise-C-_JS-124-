@@ -8,13 +8,18 @@ import axios from '../axios'
 export default function UserById() {
   const [input, setInput] = useState("")
   const [isShowing, setShow] = useState(false);
-  const [data, setData] = useState({})
+  const [data, setData] = useState([])
 
   const handleClick = async (id) => {
     axios
     .get(`/users/${id}`)
-    .then(response => {setData(response.data)});
+    .then(response => {setData([response.data])});
     setShow(true)
+  }
+
+  const handleDelete = async (id) => {
+    const newData = data.filter((user) => user.id != id);
+    setData(newData)
   }
 
   return (
@@ -34,7 +39,7 @@ export default function UserById() {
         <Button size='large' variant="contained" onClick={() => handleClick(input)}>Search</Button>
       </Box>
       <br/>
-      {isShowing && <UserTable data={[data]}/>}
+      {isShowing && <UserTable data={data} handleDelete={handleDelete}/>}
     </div>
   );
 }

@@ -18,6 +18,11 @@ export default function AllUsers(){
         setShow(true)
     }
 
+    const handleDelete = async (id) => {
+        const newData = data.filter((user) => user.id != id);
+        setData(newData)
+    }
+
     return(
         <div>
             <Button size='large' variant="contained" onClick={() => handleClick()}>
@@ -25,7 +30,7 @@ export default function AllUsers(){
             </Button>
             <br/>
             <br/>
-            {isShowing && <UserTable data={data}/>}
+            {isShowing && <UserTable data={data} handleDelete={handleDelete}/>}
         </div>
     )
 }
