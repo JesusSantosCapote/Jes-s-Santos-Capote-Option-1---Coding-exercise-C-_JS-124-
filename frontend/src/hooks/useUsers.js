@@ -1,10 +1,11 @@
 import instance from "../axios";
 import { useState, useEffect } from "react";
 import { USER_ENDPOINT } from "../constants/constants";
-import { enqueueSnackbar } from "notistack";
+import { useSnackbar } from "notistack";
 
 export function useUsers(){
     const [users, setUsers] = useState([])
+    const {enqueueSnackbar} = useSnackbar()
 
     useEffect(() => {
         instance
@@ -51,7 +52,8 @@ export function useUsers(){
 
     const handleInsert = async (id, name) => {
         const oldData = users.map((user) => user)
-        const newData = users.map((user) => user).push({id: id, name: name})
+        const newData = users.map((user) => user)
+        newData.push({id:id, name:name})
 
         setUsers(newData)
 
