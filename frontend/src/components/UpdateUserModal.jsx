@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import axios from '../axios'
 import Typography from '@mui/material/Typography';
+import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 
 const style = {
   position: 'absolute',
@@ -26,7 +27,7 @@ export default function UpdateUserModal({id, handleUpdate}) {
 
   return (
     <Box>
-        <Button variant='contained' size='small' onClick={handleOpen}>Edit</Button>
+        <Button variant='contained' size='small' onClick={handleOpen}><ModeEditOutlineOutlinedIcon /></Button>
           <Modal
             keepMounted
             open={open}

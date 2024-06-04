@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import UpdateUserModal from './UpdateUserModal';
 import Grid from '@mui/material/Grid';
 import { Box } from '@mui/material';
-import { useState } from 'react';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 export default function UserTable({data, handleDelete, handleUpdate}) {
   console.log(data)
@@ -41,7 +41,7 @@ export default function UserTable({data, handleDelete, handleUpdate}) {
               <Grid container spacing={10}>
                 <Grid item xs={2}>
                   <Button size='small' variant="contained" onClick={() => handleDelete(user.id)}>
-                      Delete
+                      <DeleteOutlineIcon />
                   </Button>
                 </Grid>
                 <Grid item xs={2}>
