@@ -25,29 +25,29 @@ export default function UpdateUserModal({id, handleUpdate}) {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <Button variant='contained' size='small' onClick={handleOpen}>Edit</Button>
-      <Modal
-        keepMounted
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="keep-mounted-modal-title"
-        aria-describedby="keep-mounted-modal-description"
-      >
-        <Box
-            component="form"
-            sx={style}
-            noValidate
-            autoComplete="off"
-        >
-            <TextField id="outlined-basic" label="Name" variant="standard" 
-            onChange={e => setName(e.target.value)}
-            />
-            <br/>
-            <br/>
-            <Button size='large' variant="contained" onClick={() => handleUpdate({id:id, name:nameInput})}>Submit</Button>
-        </Box>
-      </Modal>
-    </div>
+    <Box>
+        <Button variant='contained' size='small' onClick={handleOpen}>Edit</Button>
+          <Modal
+            keepMounted
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="keep-mounted-modal-title"
+            aria-describedby="keep-mounted-modal-description"
+          >
+              <Box
+                  component="form"
+                  sx={style}
+                  noValidate
+                  autoComplete="off"
+              >
+                  <TextField id="outlined-basic" label="Name" variant="standard" 
+                  onChange={e => setName(e.target.value)}
+                  />
+                  <br/>
+                  <br/>
+                  <Button size='large' variant="contained" onClick={() => handleUpdate({id:id, name:nameInput})}>Submit</Button>
+              </Box>
+          </Modal>
+      </Box>
   );
 }

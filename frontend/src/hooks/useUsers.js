@@ -32,14 +32,14 @@ export function useUsers(){
     }
 
     const handleUpdate = async (user) => {
-        const newData = data.map((item) => {
+        const newData = users.map((item) => {
             if (item.id == user.id){
                 return {id: item.id, name: user.name};
             }
             return item;
         })
         const oldData = users.map((user) => user)
-        setData(newData)
+        setUsers(newData)
 
         await instance.put(USER_ENDPOINT + user.id, user)
         .then(() => enqueueSnackbar("Operation completed succefully", {variant:'success'}))
