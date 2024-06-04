@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,7 +11,6 @@ import UpdateUserModal from './UpdateUserModal';
 import Grid from '@mui/material/Grid';
 
 export default function UserTable({data, handleDelete, handleUpdate}) {
-  const [modalOpen, setModal] = useState(false)
 
   const handleDeleteButtonClick = async (id) => {
     await axios.delete(`/users/${id}`)
