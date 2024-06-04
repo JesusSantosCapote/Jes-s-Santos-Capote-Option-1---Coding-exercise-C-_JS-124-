@@ -1,16 +1,15 @@
-import axios from "axios";
+import instance from "../axios";
 import { useState, useEffect } from "react";
 import { USER_ENDPOINT } from "../constants/constants";
 import { enqueueSnackbar } from "notistack";
-
 
 export function useUsers(){
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        axios
+        instance
         .get(USER_ENDPOINT)
-        .then(response => {setUsers(response.data)})
+        .then(response => {setUsers(response.data); console.log(response)})
         .catch((error) => {
             console.log(error)
         });
@@ -22,7 +21,7 @@ export function useUsers(){
 
         setUsers(newData)
 
-        await axios.delete(USER_ENDPOINT + id)
+        await instance.delete(USER_ENDPOINT + id)
         .then(() => enqueueSnackbar("Operation completed succefully", {variant:'success'}))
         .catch((message) => {
             console.log(message)
@@ -41,7 +40,7 @@ export function useUsers(){
         const oldData = users.map((user) => user)
         setData(newData)
 
-        await axios.put(USER_ENDPOINT + user.id, user)
+        await instance.put(USER_ENDPOINT + user.id, user)
         .then(() => enqueueSnackbar("Operation completed succefully", {variant:'success'}))
         .catch((message) => {
             console.log(message)
@@ -56,12 +55,19 @@ export function useUsers(){
 
         setUsers(newData)
 
-        await axios.post(USER_ENDPOINT, {id: id, name:name})
+        await instance.post(USER_ENDPOINT, {id: id, name:name})
         .then(() => enqueueSnackbar("Operation completed succefully", {variant:'success'}))
         .catch((message) => {
             console.log(message)
             setUsers(oldData)
             enqueueSnackbar("Unable to complete the operation due server error", {variant:'warning'})
         })
+    }
+
+    return {
+        users,
+        handleDelete,
+        handleUpdate,
+        handleInsert
     }
 }

@@ -12,12 +12,6 @@ import Grid from '@mui/material/Grid';
 
 export default function UserTable({data, handleDelete, handleUpdate}) {
 
-  const handleDeleteButtonClick = async (id) => {
-    await axios.delete(`/users/${id}`)
-    .catch((error) => console.log(error))
-    .then(() => handleDelete(id))
-  }
-
   return (
   <TableContainer component={Paper}>
     <Table sx={{ minWidth: 450 }} aria-label="simple table">
@@ -43,7 +37,7 @@ export default function UserTable({data, handleDelete, handleUpdate}) {
             <TableCell>
             <Grid container spacing={10}>
               <Grid item xs={2}>
-                <Button size='small' variant="contained" onClick={() => {handleDeleteButtonClick(user.id)}}>
+                <Button size='small' variant="contained" onClick={() => handleDelete(user.id)}>
                     Delete
                 </Button>
               </Grid>

@@ -2,26 +2,15 @@ import {useState} from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import UserTable from './UserTable';
-import axios from '../axios'
-import SuccessAlert from './SuccessAlert';
+import { Typography } from '@mui/material';
 
-export default function AddUserForm() {
+export default function AddUserForm({handleInsert}) {
   const [inputId, setInputId] = useState("")
   const [inputName, setInputName] = useState("")
-  const [showSuccess, setSuccess] = useState(false)
-
-  const handleClick = async () => {
-    const newUser = {id: inputId, name: inputName}
-    await axios
-    .post("/users", newUser)
-    .then(() => {setSuccess(true)})
-    .catch(error => console.log(error))
-  }
 
   return (
-    <div>
-      <h3>Add new User</h3>
+    <Box>
+      <Typography variant='h2'>Add new User</Typography>
       <Box
         component="form"
         sx={{
@@ -31,15 +20,14 @@ export default function AddUserForm() {
         autoComplete="off"
       >
         <TextField id="outlined-basic" label="Id" variant="standard" 
-        onChange={e => {setInputId(e.target.value); setSuccess(false)}}
+        onChange={e => setInputId(e.target.value)}
         />
 
         <TextField id="outlined-basic" label="Name" variant="standard" 
-        onChange={e => {setInputName(e.target.value); setSuccess(false)}}
+        onChange={e => setInputName(e.target.value)}
         />
-        <Button size='large' variant="contained" onClick={() => handleClick()}>Submit</Button>
+        <Button size='large' variant="contained" onClick={() => handleInsert(inputId, inputName)}>Submit</Button>
       </Box>
-      {showSuccess && <SuccessAlert/>}
-    </div>
+    </Box>
   );
 }

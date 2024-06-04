@@ -1,19 +1,11 @@
-import './App.css';
-import UserById from './components/UserById';
-import AllUsers from './components/AllUsers';
-import AddUserForm from './components/AddUserForm';
-
+import { Box } from '@mui/material';
+import UserDashboard from './components/UserDashboard';
 
 function App() {
   return (
-    <div>
-      <h1>Users Dashboard</h1>
-      <AddUserForm/>
-      <br/>
-      <UserById/>
-      <br/>
-      <AllUsers/>
-    </div>
+    <Box>
+      <UserDashboard />
+    </Box>
   )
 }
 

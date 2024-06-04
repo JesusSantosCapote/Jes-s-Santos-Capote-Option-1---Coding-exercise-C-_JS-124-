@@ -24,13 +24,6 @@ export default function UpdateUserModal({id, handleUpdate}) {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const handleClick = async () => {
-    const user = {id: id, name: nameInput}
-    await axios.put(`/users/${id}`, user)
-    .catch(error => console.log(error))
-    .then(handleUpdate(user))
-  };
-
   return (
     <div>
       <Button variant='contained' size='small' onClick={handleOpen}>Edit</Button>
@@ -52,7 +45,7 @@ export default function UpdateUserModal({id, handleUpdate}) {
             />
             <br/>
             <br/>
-            <Button size='large' variant="contained" onClick={() => handleClick()}>Submit</Button>
+            <Button size='large' variant="contained" onClick={() => handleUpdate({id:id, name:nameInput})}>Submit</Button>
         </Box>
       </Modal>
     </div>
